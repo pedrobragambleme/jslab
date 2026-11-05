@@ -11,16 +11,11 @@ const ehAluno = true;
 const possuiAcesso =
     ehProfessor || ehAluno;
 
-console.log(possuiAcesso);
 
-const nota = 70;
-const frequencia = 80;
-if (nota >= 60 && frequencia >= 75) {
-    console.log("Aluno aprovado");
-} else {
-    console.log("Aluno não aprovado");
+let contador = 1;
+
+while (contador <= 5) {
+    console.log(contador);
+
+    contador++;
 }
-
-console.log("Informação");
-console.warn("Atenção");
-console.error("Erro");
