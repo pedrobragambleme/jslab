@@ -129,3 +129,42 @@ console.log(
     texto.includes("central")
 );
 
+pedidos.sort(
+    (a, b) => a.valor - b.valor
+);
+
+console.log(pedidos);
+const pedidosOrdenados = [
+    ...pedidos
+];
+pedidosOrdenados.sort(
+    (a, b) => a.valor - b.valor
+);
+const crescente = [...pedidos];
+
+crescente.sort(
+    (a, b) => a.valor - b.valor
+);
+
+const formatadorMoeda =
+    new Intl.NumberFormat(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+    console.log(
+    formatadorMoeda.format(850)
+);
+pedidos.forEach(pedido => {
+
+    const valorFormatado =
+        formatadorMoeda.format(
+            pedido.valor
+        );
+
+    console.log(
+        `${pedido.cliente} - ${valorFormatado}`
+    );
+});
