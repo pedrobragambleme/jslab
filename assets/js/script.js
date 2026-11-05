@@ -78,3 +78,54 @@ const { id, cliente } = pedidos[0];
 
 console.log(id);
 console.log(cliente);
+
+const pedidoEncontrado =
+    pedidos.find(pedido => pedido.id === 1043);
+
+console.log(pedidoEncontrado);
+
+function buscarPedidoPorId(id) {
+    return pedidos.find(
+        pedido => pedido.id === id
+    );
+}
+console.log(buscarPedidoPorId(1042));
+console.log(buscarPedidoPorId(9999));
+
+const indice =
+    pedidos.findIndex(
+        pedido => pedido.id === 1043
+    );
+
+console.log(indice);
+
+const pedidosAbertos =
+    pedidos.filter(
+        pedido => pedido.status === "aberto"
+    );
+
+console.log(pedidosAbertos);
+
+const nomesClientes =
+    pedidos.map(
+        pedido => pedido.cliente
+    );
+
+console.log(nomesClientes);
+
+const resumos =
+    pedidos.map(pedido => {
+        return `${pedido.id} - ${pedido.cliente}`;
+    });
+
+console.log(resumos);
+
+const texto = "Clínica Central";
+
+console.log(
+    texto.includes("Central")
+);
+console.log(
+    texto.includes("central")
+);
+
